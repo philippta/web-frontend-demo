@@ -2,4 +2,4 @@
 
 Link to the article:
 
-https://philippta.github.io/web-frontends-in-go/
+https://philipptanlak.com/web-frontends-in-go/
