@@ -20,8 +20,11 @@ type DashboardParams struct {
 	Message string
 }
 
-func Dashboard(w io.Writer, p DashboardParams) error {
-	return dashboard.Execute(w, p)
+func Dashboard(w io.Writer, p DashboardParams, partial string) error {
+	if partial == "" {
+		partial = "layout.html"
+	}
+	return dashboard.ExecuteTemplate(w, partial, p)
 }
 
 type ProfileShowParams struct {
@@ -29,8 +32,11 @@ type ProfileShowParams struct {
 	Message string
 }
 
-func ProfileShow(w io.Writer, p ProfileShowParams) error {
-	return profileShow.Execute(w, p)
+func ProfileShow(w io.Writer, p ProfileShowParams, partial string) error {
+	if partial == "" {
+		partial = "layout.html"
+	}
+	return profileShow.ExecuteTemplate(w, partial, p)
 }
 
 type ProfileEditParams struct {
@@ -38,8 +44,11 @@ type ProfileEditParams struct {
 	Message string
 }
 
-func ProfileEdit(w io.Writer, p ProfileEditParams) error {
-	return profileEdit.Execute(w, p)
+func ProfileEdit(w io.Writer, p ProfileEditParams, partial string) error {
+	if partial == "" {
+		partial = "layout.html"
+	}
+	return profileEdit.ExecuteTemplate(w, partial, p)
 }
 
 func parse(file string) *template.Template {

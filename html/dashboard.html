@@ -3,4 +3,24 @@
     Dashboard:
     {{.Message}}
 </p>
+
+{{block "statistics" .}}
+<div id="statistics">
+    <div>Likes: 69</div>
+    <div>Follows: 420</div>
+</div>
+{{end}}
+
+{{block "logs" .}}
+<div id="logs">
+    <div>Log message 1</div>
+    <div>Log message 2</div>
+    <div>Log message 3</div>
+</div>
+{{end}}
+
+<p>
+    Some more content
+</p>
+
 {{end}}
