@@ -3,7 +3,7 @@ package html
 import (
 	"embed"
 	"io"
-	"text/template"
+	"html/template"
 )
 
 //go:embed *
